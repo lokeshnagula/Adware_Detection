@@ -3,13 +3,9 @@ import numpy as np
 import pickle
 
 # Load the trained model
-@st.cache_resource
-def load_model():
-    with open("model.pkl", "rb") as file:
-        model = pickle.load(file)
-    return model
-
-model = load_model()
+model_path = "model.pkl"  # Replace with your actual model file
+with open(model_path, "rb") as file:
+    model = pickle.load(file)
 
 # Feature names
 feature_names = [
